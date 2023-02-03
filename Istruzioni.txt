@@ -1,0 +1,35 @@
+PARCHEGGIO
+
+Area
+ attributi:
+  numeroPosti
+  accessibile
+  List<Veicoli> posti
+
+ isAccessibile
+ calcolaDisponibilitaPosti
+
+ parcheggiaVeicolo( Veicolo veicolo )
+ Veicolo = esceVeicolo( Targa )
+
+Parcheggio
+ List<Area> aree
+
+
+Biglietto
+ attributi:
+  oraIngresso
+
+Abbiamo un'entità base chiamata Veicolo. tutte le entità che estendono Veicolo, specificano
+il numero di posti occupati nel parcheggio e la propria tariffa oraria
+
+Veicolo
+ Targa
+ Biglietto
+
+ Moto -> 1 posto auto -> 0.5/h
+ Auto -> 1 posto auto -> 1/h
+ Autobus -> 4 posti auto -> 3/h
+
+Cassa
+ calcolaTariffa( Veicolo ) -> quanto paga per il parcheggio
